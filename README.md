@@ -4,7 +4,7 @@ Este projeto é uma solução para o desafio de estágio da AutoU. É uma aplica
 
 A aplicação é construída em Python com Flask no backend e HTML/CSS/JS puro no frontend. A lógica de IA é fornecida pela API do Groq, utilizando o modelo `llama-3.1-8b-instant`.
 
-**[Link para a Aplicação na Nuvem]** <- (Você vai adicionar isso depois do deploy)
+**https://desafioautouluine.onrender.com** 
 
 ## ✨ Funcionalidades
 
