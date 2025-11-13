@@ -1,0 +1,178 @@
+/* --- Importação de Fonte e Variáveis Globais (Root) --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color: #121212;
+    --primary-color: #1e1e1e;
+    --secondary-color: #2a2a2a;
+    --font-color: #e0e0e0;
+    --highlight-color: #bb86fc;
+    --border-color: #3a3a3a;
+    --success-color: #03dac6;
+    --error-color: #cf6679;
+}
+
+/* --- Reset e Estilos de Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--highlight-color);
+    margin-bottom: 0.5rem;
+}
+
+/* --- Seção do Formulário e Entradas --- */
+.form-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-area textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--font-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.input-area textarea:focus {
+    outline: none;
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 0 2px var(--highlight-color);
+}
+
+.upload-area .file-label {
+    display: block;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.upload-area .file-label:hover {
+    background-color: #333;
+    border-color: var(--highlight-color);
+}
+
+.upload-area input[type="file"] {
+    display: none;
+}
+
+#file-name {
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+button {
+    background-color: var(--highlight-color);
+    color: #121212;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #a056f7;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background-color: var(--border-color);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* --- Seção de Resultados --- */
+.hidden {
+    display: none !important;
+}
+
+#result-section {
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+#result-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.result-box {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.result-box h3 {
+    color: var(--highlight-color);
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+#classification-result {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#suggestion-result {
+    white-space: pre-wrap; /* Preserva quebras de linha da IA */
+}
+
+/* --- Mensagens de Erro --- */
+#error-message {
+    margin-top: 1.5rem;
+    background-color: var(--error-color);
+    color: #121212;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 700;
+}
