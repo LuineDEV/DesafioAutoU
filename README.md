@@ -1,4 +1,4 @@
-# 🚀 Desafio AutoU: Classificador de Emails com IA
+Classificador de Emails com IA
 
 Este projeto é uma solução para o desafio de estágio da AutoU. É uma aplicação web simples que utiliza inteligência artificial para classificar emails como "Produtivo" ou "Improdutivo" e sugerir uma resposta automática adequada.
 
